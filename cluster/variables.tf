@@ -32,3 +32,8 @@ variable "capacity_providers" {
     "FARGATE", "FARGATE_SPOT"
   ]
 }
+
+variable "acm_certs" {
+  type = list(string)
+  default = []
+}
