@@ -55,7 +55,7 @@ resource "aws_lb_listener" "main" {
     type = "fixed-response"
     fixed_response {
       content_type = "text/plain"
-      message_body = "LinuxTips"
+      message_body = format("LinuxTips - %s", var.region)
       status_code  = "200"
     }
   }

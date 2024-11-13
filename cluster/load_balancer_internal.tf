@@ -56,7 +56,7 @@ resource "aws_lb_listener" "internal" {
     type = "fixed-response"
     fixed_response {
       content_type = "text/plain"
-      message_body = "LinuxTips Internal"
+      message_body = format("LinuxTips Internal - %s", var.region)
       status_code  = "200"
     }
   }
